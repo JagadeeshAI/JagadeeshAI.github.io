@@ -3,537 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name — Researcher</title>
+    <title>Jagadeesh Rachapudi — M.S. Student, IIT Mandi</title>
+    <meta name="description" content="Jagadeesh Rachapudi — M.S. student at IIT Mandi researching Machine Unlearning, LLMs, and AI Safety at the Center for Artificial Intelligence.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --ink: #1a1a2e;
-            --paper: #faf9f6;
-            --accent: #2563eb;
-            --accent-light: #dbeafe;
-            --accent-dark: #1e40af;
-            --muted: #64748b;
-            --border: #e2e8f0;
-            --card-bg: #ffffff;
-            --section-alt: #f1f5f9;
-            --success: #059669;
-            --warm: #f59e0b;
-            --font-display: 'Source Serif 4', Georgia, serif;
-            --font-body: 'DM Sans', system-ui, sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
-            --max-w: 960px;
-            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--ink);
-            background: var(--paper);
-            line-height: 1.7;
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ── NAV ── */
-        nav {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(250, 249, 246, 0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            transition: box-shadow var(--transition);
-        }
-        nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
-        .nav-inner {
-            max-width: var(--max-w);
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 64px;
-        }
-        .nav-name {
-            font-family: var(--font-display);
-            font-weight: 700;
-            font-size: 1.15rem;
-            color: var(--ink);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-        .nav-links { display: flex; gap: 0.25rem; }
-        .nav-links a {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-            padding: 0.4rem 0.75rem;
-            border-radius: 6px;
-            transition: all var(--transition);
-        }
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent);
-            background: var(--accent-light);
-        }
-        .hamburger {
-            display: none; background: none; border: none; cursor: pointer;
-            width: 32px; height: 32px; position: relative;
-        }
-        .hamburger span {
-            display: block; width: 20px; height: 2px; background: var(--ink);
-            position: absolute; left: 6px; transition: all 0.3s;
-        }
-        .hamburger span:nth-child(1) { top: 10px; }
-        .hamburger span:nth-child(2) { top: 16px; }
-        .hamburger span:nth-child(3) { top: 22px; }
-
-        /* ── HERO ── */
-        .hero {
-            padding: 10rem 2rem 5rem;
-            max-width: var(--max-w);
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        .hero-photo {
-            width: 220px; height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--accent-light);
-            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.12);
-            background: var(--border);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 4rem; color: var(--muted);
-            overflow: hidden;
-        }
-        .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
-        .hero-info h1 {
-            font-family: var(--font-display);
-            font-size: 2.75rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
-            margin-bottom: 0.5rem;
-        }
-        .hero-info .subtitle {
-            font-size: 1.15rem;
-            color: var(--muted);
-            margin-bottom: 1rem;
-        }
-        .hero-info .subtitle strong { color: var(--accent); font-weight: 600; }
-        .hero-bio {
-            font-size: 0.975rem;
-            color: #475569;
-            margin-bottom: 1.5rem;
-            max-width: 580px;
-        }
-        .hero-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-        .hero-links a {
-            display: inline-flex; align-items: center; gap: 0.4rem;
-            padding: 0.5rem 1rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all var(--transition);
-        }
-        .hero-links a.primary {
-            background: var(--accent);
-            color: #fff;
-        }
-        .hero-links a.primary:hover { background: var(--accent-dark); }
-        .hero-links a.secondary {
-            background: var(--card-bg);
-            color: var(--ink);
-            border: 1px solid var(--border);
-        }
-        .hero-links a.secondary:hover { border-color: var(--accent); color: var(--accent); }
-        .hero-links a svg { width: 16px; height: 16px; }
-
-        /* ── INTERESTS / EDUCATION CHIPS ── */
-        .chips-row {
-            max-width: var(--max-w);
-            margin: 0 auto 4rem;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        .chip-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.75rem;
-        }
-        .chip-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: flex; align-items: center; gap: 0.5rem;
-        }
-        .chip-card h3 span { font-size: 1.25rem; }
-        .chip-list { list-style: none; }
-        .chip-list li {
-            padding: 0.4rem 0;
-            font-size: 0.9rem;
-            color: #475569;
-            display: flex; align-items: flex-start; gap: 0.5rem;
-        }
-        .chip-list li::before {
-            content: '▸';
-            color: var(--accent);
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-        .edu-item { margin-bottom: 0.75rem; }
-        .edu-item .degree { font-weight: 600; font-size: 0.9rem; }
-        .edu-item .school { font-size: 0.85rem; color: var(--muted); }
-
-        /* ── SECTIONS ── */
-        section {
-            padding: 4rem 2rem;
-        }
-        section:nth-child(even) {
-            background: var(--section-alt);
-        }
-        .section-inner {
-            max-width: var(--max-w);
-            margin: 0 auto;
-        }
-        .section-title {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 2rem;
-            display: flex; align-items: center; gap: 0.75rem;
-        }
-        .section-title::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--border);
-        }
-
-        /* ── PUBLICATIONS ── */
-        .pub-list { display: flex; flex-direction: column; gap: 1.25rem; }
-        .pub-item {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.25rem 1.5rem;
-            transition: all var(--transition);
-            position: relative;
-        }
-        .pub-item:hover {
-            border-color: var(--accent);
-            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
-        }
-        .pub-venue {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.35rem;
-        }
-        .pub-title {
-            font-family: var(--font-display);
-            font-size: 1.05rem;
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 0.3rem;
-        }
-        .pub-authors {
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-        .pub-authors strong { color: var(--ink); font-weight: 600; }
-        .pub-links {
-            margin-top: 0.6rem;
-            display: flex; gap: 0.5rem;
-        }
-        .pub-links a {
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.25rem 0.6rem;
-            border-radius: 5px;
-            text-decoration: none;
-            border: 1px solid var(--border);
-            color: var(--muted);
-            transition: all var(--transition);
-        }
-        .pub-links a:hover { color: var(--accent); border-color: var(--accent); }
-
-        /* ── EXPERIENCE / TIMELINE ── */
-        .timeline { position: relative; padding-left: 1.75rem; }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0; top: 0.5rem; bottom: 0.5rem;
-            width: 2px;
-            background: var(--border);
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -1.75rem; top: 0.55rem;
-            width: 10px; height: 10px;
-            border-radius: 50%;
-            background: var(--accent);
-            border: 2px solid var(--paper);
-            box-shadow: 0 0 0 2px var(--accent);
-        }
-        .timeline-date {
-            font-family: var(--font-mono);
-            font-size: 0.78rem;
-            color: var(--accent);
-            margin-bottom: 0.2rem;
-        }
-        .timeline-role {
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 0.15rem;
-        }
-        .timeline-org {
-            font-size: 0.9rem;
-            color: var(--muted);
-            margin-bottom: 0.3rem;
-        }
-        .timeline-desc {
-            font-size: 0.875rem;
-            color: #475569;
-        }
-
-        /* ── SKILLS ── */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        .skill-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.25rem;
-            transition: all var(--transition);
-        }
-        .skill-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-        .skill-card h4 {
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: flex; align-items: center; gap: 0.4rem;
-        }
-        .skill-card p {
-            font-size: 0.82rem;
-            color: var(--muted);
-            line-height: 1.5;
-        }
-        .skill-tags {
-            display: flex; flex-wrap: wrap; gap: 0.35rem;
-            margin-top: 0.5rem;
-        }
-        .skill-tags span {
-            font-size: 0.72rem;
-            font-weight: 500;
-            padding: 0.2rem 0.5rem;
-            background: var(--accent-light);
-            color: var(--accent-dark);
-            border-radius: 4px;
-        }
-
-        /* ── PROJECTS ── */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.25rem;
-        }
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all var(--transition);
-        }
-        .project-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
-            transform: translateY(-2px);
-        }
-        .project-card h4 {
-            font-family: var(--font-display);
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 0.4rem;
-        }
-        .project-card p {
-            font-size: 0.875rem;
-            color: #475569;
-            margin-bottom: 0.75rem;
-        }
-        .project-tech {
-            display: flex; flex-wrap: wrap; gap: 0.3rem;
-        }
-        .project-tech span {
-            font-size: 0.7rem;
-            font-weight: 500;
-            padding: 0.15rem 0.5rem;
-            background: var(--section-alt);
-            color: var(--muted);
-            border-radius: 4px;
-            border: 1px solid var(--border);
-        }
-
-        /* ── AWARDS ── */
-        .awards-list { display: flex; flex-direction: column; gap: 0.75rem; }
-        .award-item {
-            display: flex; gap: 1rem; align-items: flex-start;
-            padding: 1rem 1.25rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-        }
-        .award-year {
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            color: var(--accent);
-            white-space: nowrap;
-            padding-top: 0.1rem;
-        }
-        .award-text { font-size: 0.9rem; }
-        .award-text strong { font-weight: 600; }
-        .award-text .award-org { color: var(--muted); font-size: 0.85rem; }
-
-        /* ── CONTACT ── */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        .contact-info { display: flex; flex-direction: column; gap: 1rem; }
-        .contact-item {
-            display: flex; align-items: center; gap: 0.75rem;
-            font-size: 0.925rem;
-        }
-        .contact-item svg {
-            width: 20px; height: 20px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-        .contact-item a {
-            color: var(--ink);
-            text-decoration: none;
-            border-bottom: 1px dashed var(--border);
-            transition: all var(--transition);
-        }
-        .contact-item a:hover { color: var(--accent); border-color: var(--accent); }
-        .contact-map {
-            background: var(--section-alt);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            height: 220px;
-            display: flex; align-items: center; justify-content: center;
-            color: var(--muted);
-            font-size: 0.9rem;
-            overflow: hidden;
-        }
-
-        /* ── FOOTER ── */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.8rem;
-            color: var(--muted);
-            border-top: 1px solid var(--border);
-        }
-        footer a { color: var(--accent); text-decoration: none; }
-
-        /* ── RECRUITING BANNER ── */
-        .recruit-banner {
-            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-            color: #fff;
-            border-radius: 12px;
-            padding: 1.75rem 2rem;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .recruit-banner .icon { font-size: 2rem; flex-shrink: 0; }
-        .recruit-banner h3 {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
-            margin-bottom: 0.3rem;
-        }
-        .recruit-banner p { font-size: 0.9rem; opacity: 0.92; }
-
-        /* ── ANIMATIONS ── */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ── RESPONSIVE ── */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                padding-top: 7rem;
-                gap: 1.5rem;
-            }
-            .hero-photo { margin: 0 auto; width: 160px; height: 160px; }
-            .hero-info h1 { font-size: 2rem; }
-            .hero-bio { margin: 0 auto 1.5rem; }
-            .hero-links { justify-content: center; }
-            .chips-row, .projects-grid, .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-links { display: none; }
-            .nav-links.open {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 64px; left: 0; right: 0;
-                background: var(--paper);
-                border-bottom: 1px solid var(--border);
-                padding: 1rem 2rem;
-                box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-            }
-            .hamburger { display: block; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- ════ NAVIGATION ════ -->
 <nav id="navbar">
     <div class="nav-inner">
-        <a href="#" class="nav-name">Your Name</a>
+        <a href="#" class="nav-name">Jagadeesh Rachapudi</a>
         <div class="nav-links" id="navLinks">
             <a href="#about">About</a>
             <a href="#publications">Publications</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
-            <a href="#awards">Awards</a>
+            <a href="#service">Service</a>
             <a href="#contact">Contact</a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -545,35 +33,37 @@
 <!-- ════ HERO ════ -->
 <header class="hero" id="about">
     <div class="hero-photo">
-        <!-- Replace with: <img src="photo.jpg" alt="Your Name"> -->
-        👤
+        <!-- Replace with: <img src="photo.jpg" alt="Jagadeesh Rachapudi"> -->
+        JR
     </div>
     <div class="hero-info">
-        <h1>Your Name</h1>
-        <p class="subtitle">PhD Student · <strong>AI &amp; Machine Learning</strong></p>
+        <h1>Jagadeesh Rachapudi</h1>
+        <p class="subtitle">M.S. Student · <strong>AI &amp; Machine Learning</strong> · IIT Mandi</p>
         <p class="hero-bio">
-            I am a PhD student at [University Name], working on [your research area].
-            My research focuses on developing [specific methods/systems] for [application domain].
-            I am advised by <a href="#">Prof. Advisor Name</a>.
+            Second-year M.S. student at IIT Mandi's <strong>Center for Artificial Intelligence</strong>,
+            researching <strong>Machine Unlearning</strong>, <strong>Large Language Models</strong>, and
+            <strong>AI Safety</strong> under Dr. Amit Shukla and Dr. Praful Hambarde. I build AI systems
+            for model evaluation, security testing, and continual learning — with a focus on making them
+            reliable and safe.
         </p>
         <div class="hero-links">
-            <a href="mailto:your.email@university.ac.jp" class="primary">
+            <a href="mailto:rachapudijagadeesh9580@gmail.com" class="primary">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 Email
             </a>
-            <a href="https://scholar.google.com/" class="secondary" target="_blank">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
-                Scholar
-            </a>
-            <a href="https://github.com/" class="secondary" target="_blank">
+            <a href="https://github.com/JagadeeshAI" class="secondary" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                 GitHub
             </a>
-            <a href="#" class="secondary" target="_blank">
+            <a href="https://linkedin.com/in/jagadeeshrachapudi" class="secondary" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 LinkedIn
             </a>
-            <a href="/cv.pdf" class="secondary" target="_blank">
+            <a href="https://huggingface.co/Jagadeesh9580" class="secondary" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="8.5" cy="10.5" r="1.2" fill="#fff"/><circle cx="15.5" cy="10.5" r="1.2" fill="#fff"/><path d="M8 14c1 1.5 2.5 2.5 4 2.5s3-1 4-2.5" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                Hugging Face
+            </a>
+            <a href="Jagadeesh.pdf" class="secondary" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                 CV
             </a>
@@ -586,51 +76,49 @@
     <div class="chip-card fade-in">
         <h3><span>🔬</span> Research Interests</h3>
         <ul class="chip-list">
-            <li>Deep Learning / Machine Learning</li>
-            <li>Computer Vision</li>
+            <li>Machine Unlearning</li>
+            <li>Large Language Models &amp; AI Safety</li>
+            <li>Continual Learning</li>
+            <li>Model Security &amp; Backdoor Detection</li>
             <li>Natural Language Processing</li>
-            <li>Medical AI</li>
-            <li>Explainable AI</li>
         </ul>
     </div>
     <div class="chip-card fade-in">
         <h3><span>🎓</span> Education</h3>
         <div class="edu-item">
-            <div class="degree">MSc in Computer Science, 2023</div>
-            <div class="school">University Name, Country</div>
+            <div class="degree">M.S. in Computer Science</div>
+            <div class="school">Indian Institute of Technology (IIT) Mandi</div>
+            <div class="meta">Jan 2024 – Present · CGPA 7.33 / 10.0</div>
         </div>
         <div class="edu-item">
-            <div class="degree">BTech in Computer Science, 2021</div>
-            <div class="school">University Name, Country</div>
+            <div class="degree">B.Tech in Computer Science</div>
+            <div class="school">Rise Krishna Sai Gandhi Group of Institutions</div>
+            <div class="meta">Mar 2018 – Feb 2022 · CGPA 7.21 / 10.0</div>
         </div>
     </div>
 </div>
 
-<!-- ════ NEWS / RECRUITING ════ -->
+<!-- ════ NEWS ════ -->
 <section id="news">
     <div class="section-inner">
         <h2 class="section-title">News</h2>
 
-        <div class="recruit-banner fade-in">
-            <div class="icon">📢</div>
-            <div>
-                <h3>I am looking for PhD / research opportunities!</h3>
-                <p>I am actively seeking PhD positions in AI/ML for 2026–2027 intake. If you are a professor looking for motivated students, please feel free to reach out.</p>
-            </div>
-        </div>
-
         <div class="pub-list">
             <div class="pub-item fade-in" style="padding: 0.9rem 1.25rem;">
                 <span class="pub-venue">Apr 2026</span>
-                <p style="font-size:0.9rem;">Updated personal website.</p>
+                <p style="font-size:0.9rem;">Paper <em>BackFlush</em> accepted at <strong>IJCNN 2026</strong>.</p>
             </div>
             <div class="pub-item fade-in" style="padding: 0.9rem 1.25rem;">
                 <span class="pub-venue">Mar 2026</span>
-                <p style="font-size:0.9rem;">Submitted paper to [Conference Name] 2026.</p>
+                <p style="font-size:0.9rem;">Paper <em>DEG-Net</em> accepted at <strong>ACM SAC 2026</strong>.</p>
             </div>
             <div class="pub-item fade-in" style="padding: 0.9rem 1.25rem;">
-                <span class="pub-venue">Jan 2026</span>
-                <p style="font-size:0.9rem;">Started research internship at [Company/Lab].</p>
+                <span class="pub-venue">2026</span>
+                <p style="font-size:0.9rem;">Serving as reviewer for <strong>IJCNN 2026</strong> and <strong>ACM SAC 2026</strong>.</p>
+            </div>
+            <div class="pub-item fade-in" style="padding: 0.9rem 1.25rem;">
+                <span class="pub-venue">2025</span>
+                <p style="font-size:0.9rem;">Participated in <strong>CVPR 2025 NTIRE Challenge</strong> — RAW Image Super-Resolution (RawSRMamba).</p>
             </div>
         </div>
     </div>
@@ -643,35 +131,58 @@
         <div class="pub-list">
 
             <div class="pub-item fade-in">
-                <div class="pub-venue">NeurIPS 2025</div>
-                <div class="pub-title">Your Paper Title: A Novel Approach to Something Important</div>
-                <div class="pub-authors"><strong>Your Name</strong>, Co-Author One, Co-Author Two, Advisor Name</div>
+                <div class="pub-venue">IJCNN 2026 · CORE B</div>
+                <span class="pub-status status-accepted">Accepted</span>
+                <div class="pub-title">BackFlush: Knowledge-Free Backdoor Detection and Elimination with Watermark Preservation in Large Language Models</div>
+                <div class="pub-authors"><strong>Jagadeesh Rachapudi</strong>, Ritali Vatsi, Pranav Singh, Praful Hambarde, Amit Shukla</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <div class="pub-venue">ACM SAC 2026 · CORE B</div>
+                <span class="pub-status status-accepted">Accepted</span>
+                <div class="pub-title">DEG-Net: An Efficient Deep Neural Network for Railway Track Crack Segmentation</div>
+                <div class="pub-authors">Pranav Singh, Ritali Vatsi, <strong>Rachapudi Jagadeesh</strong>, Vinita Shukla, Vikas Sharma, Praful Hambarde, Amit Shukla</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <div class="pub-venue">ACM MM 2026 · CORE A*</div>
+                <span class="pub-status status-review">Under Review</span>
+                <div class="pub-title">RePAIR: Interactive Machine Unlearning through Prompt-Aware Model Repair</div>
+                <div class="pub-authors"><strong>Jagadeesh Rachapudi</strong>, Pranav Singh, Ritali Vatsi, Sachin Chaudhary, Praful Hambarde, Amit Shukla</div>
                 <div class="pub-links">
-                    <a href="#">PDF</a>
-                    <a href="#">Code</a>
-                    <a href="#">arXiv</a>
+                    <a href="https://arxiv.org/abs/2604.12820" target="_blank" rel="noopener">arXiv</a>
                 </div>
             </div>
 
             <div class="pub-item fade-in">
-                <div class="pub-venue">CVPR 2025</div>
-                <div class="pub-title">Another Great Paper: Solving Problems with Deep Learning</div>
-                <div class="pub-authors">Co-Author One, <strong>Your Name</strong>, Co-Author Two</div>
+                <div class="pub-venue">IJCB 2026 · CORE B</div>
+                <span class="pub-status status-review">Under Review</span>
+                <div class="pub-title">Camouflage Unlearning: Fast and Surgical Machine Unlearning for Biometric Systems</div>
+                <div class="pub-authors"><strong>Jagadeesh Rachapudi</strong>, Sachin Chaudhary, Praful Hambarde, Amit Shukla</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <div class="pub-venue">IEEE TAI · Q1</div>
+                <span class="pub-status status-review">Under Review</span>
+                <div class="pub-title">BID-LoRA: A Parameter-Efficient Framework for Continual Learning and Unlearning</div>
+                <div class="pub-authors"><strong>Jagadeesh Rachapudi</strong>, Ritali Vatsi, Praful Hambarde, Amit Shukla</div>
                 <div class="pub-links">
-                    <a href="#">PDF</a>
-                    <a href="#">Code</a>
-                    <a href="#">Project Page</a>
+                    <a href="https://arxiv.org/abs/2604.12686" target="_blank" rel="noopener">arXiv</a>
                 </div>
             </div>
 
             <div class="pub-item fade-in">
-                <div class="pub-venue">AAAI 2024</div>
-                <div class="pub-title">Yet Another Contribution: Making AI Better for Everyone</div>
-                <div class="pub-authors"><strong>Your Name</strong>, Advisor Name</div>
-                <div class="pub-links">
-                    <a href="#">PDF</a>
-                    <a href="#">Slides</a>
-                </div>
+                <div class="pub-venue">IEEE TAI · Q1</div>
+                <span class="pub-status status-review">Minor Review</span>
+                <div class="pub-title">Autonomous Pipeline Inspection Using Lightweight Vision-Based UAV Tracking</div>
+                <div class="pub-authors">Naisarg Panya, Surya Prakash S.K, Ayush Gupta, Ashok Kumar Sivarathri, <strong>Jagadeesh Rachapudi</strong>, Praful Hambarde, Amit Shukla</div>
+            </div>
+
+            <div class="pub-item fade-in">
+                <div class="pub-venue">IEEE AVSS 2025 · CORE B</div>
+                <span class="pub-status status-review">Under Review</span>
+                <div class="pub-title">Text-Centric Visual Question Answering Under Visual Degradation: A Comparative Study of Modular and End-to-End Approaches</div>
+                <div class="pub-authors">Ritali Vatsi, Himani Sharma, <strong>Jagadeesh Rachapudi</strong>, Vikas Sharma, Amit Shukla, Pawan Goyal</div>
             </div>
 
         </div>
@@ -681,28 +192,20 @@
 <!-- ════ EXPERIENCE ════ -->
 <section id="experience">
     <div class="section-inner">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title">Research Experience</h2>
         <div class="timeline">
 
             <div class="timeline-item fade-in">
-                <div class="timeline-date">Jan 2026 — Present</div>
-                <div class="timeline-role">Research Intern</div>
-                <div class="timeline-org">Company / Research Lab</div>
-                <div class="timeline-desc">Working on [topic]. Developed [method/system] achieving [result].</div>
-            </div>
-
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">Jun 2023 — Dec 2023</div>
-                <div class="timeline-role">Research Assistant</div>
-                <div class="timeline-org">University Lab Name</div>
-                <div class="timeline-desc">Conducted research on [topic]. Published work at [venue].</div>
-            </div>
-
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">May 2022 — Aug 2022</div>
-                <div class="timeline-role">Software Engineering Intern</div>
-                <div class="timeline-org">Tech Company</div>
-                <div class="timeline-desc">Built [feature/system]. Improved [metric] by [amount].</div>
+                <div class="timeline-date">Jan 2024 — Present</div>
+                <div class="timeline-role">M.S. Student Researcher</div>
+                <div class="timeline-org">Center for Artificial Intelligence, IIT Mandi · Advisors: Dr. Amit Shukla &amp; Dr. Praful Hambarde</div>
+                <div class="timeline-desc">
+                    <ul>
+                        <li>Research on Machine Unlearning with focus on LLMs and biometric systems.</li>
+                        <li>Built Python-based evaluation frameworks for model validation and benchmarking.</li>
+                        <li>Published / submitted 7 papers (2 accepted) at top-tier AI conferences and journals.</li>
+                    </ul>
+                </div>
             </div>
 
         </div>
@@ -712,47 +215,36 @@
 <!-- ════ PROJECTS ════ -->
 <section id="projects">
     <div class="section-inner">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">Selected Projects</h2>
         <div class="projects-grid">
 
             <div class="project-card fade-in">
-                <h4>🧠 Project Alpha</h4>
-                <p>A deep learning framework for [task]. Achieves state-of-the-art on [benchmark].</p>
+                <h4>🖼️ RawSRMamba</h4>
+                <p>Mamba-based RAW image super-resolution model — built for the <strong>CVPR 2025 NTIRE Challenge</strong> on RAW Image Restoration (Track 1: Super-Resolution).</p>
                 <div class="project-tech">
+                    <span>Mamba / SSM</span>
                     <span>PyTorch</span>
-                    <span>Python</span>
-                    <span>CUDA</span>
-                    <span>Transformers</span>
+                    <span>Image Restoration</span>
                 </div>
             </div>
 
             <div class="project-card fade-in">
-                <h4>🏥 Project Beta</h4>
-                <p>AI-powered diagnostic tool for [medical application]. Deployed at [hospital/clinic].</p>
+                <h4>🧠 BackFlush</h4>
+                <p>Knowledge-free backdoor detection and elimination in LLMs while preserving watermarks. Accepted at IJCNN 2026.</p>
                 <div class="project-tech">
-                    <span>TensorFlow</span>
-                    <span>Flask</span>
-                    <span>Docker</span>
+                    <span>LLMs</span>
+                    <span>Model Security</span>
+                    <span>PyTorch</span>
                 </div>
             </div>
 
             <div class="project-card fade-in">
-                <h4>📊 Project Gamma</h4>
-                <p>Large-scale data analysis pipeline for [domain]. Processed [X] million records.</p>
+                <h4>🧩 BID-LoRA</h4>
+                <p>Parameter-efficient framework for continual learning and machine unlearning. Under minor review at IEEE TAI.</p>
                 <div class="project-tech">
-                    <span>Spark</span>
-                    <span>Python</span>
-                    <span>AWS</span>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <h4>🤖 Project Delta</h4>
-                <p>Open-source library for [functionality]. 500+ GitHub stars.</p>
-                <div class="project-tech">
-                    <span>Python</span>
-                    <span>C++</span>
-                    <span>OpenCV</span>
+                    <span>LoRA</span>
+                    <span>Continual Learning</span>
+                    <span>Unlearning</span>
                 </div>
             </div>
 
@@ -767,46 +259,46 @@
         <div class="skills-grid">
 
             <div class="skill-card fade-in">
-                <h4>💻 Programming</h4>
-                <div class="skill-tags">
-                    <span>Python</span>
-                    <span>C++</span>
-                    <span>Java</span>
-                    <span>JavaScript</span>
-                    <span>SQL</span>
-                    <span>Bash</span>
-                </div>
-            </div>
-
-            <div class="skill-card fade-in">
-                <h4>🧠 ML Frameworks</h4>
+                <h4>🧠 ML / DL Frameworks</h4>
                 <div class="skill-tags">
                     <span>PyTorch</span>
                     <span>TensorFlow</span>
-                    <span>JAX</span>
-                    <span>HuggingFace</span>
+                    <span>Hugging Face</span>
                     <span>scikit-learn</span>
                 </div>
             </div>
 
             <div class="skill-card fade-in">
-                <h4>☁️ Infrastructure</h4>
+                <h4>🤖 LLM &amp; GenAI</h4>
                 <div class="skill-tags">
-                    <span>Docker</span>
-                    <span>AWS</span>
-                    <span>GCP</span>
-                    <span>Linux</span>
-                    <span>Git</span>
-                    <span>Slurm</span>
+                    <span>Fine-tuning</span>
+                    <span>LoRA / QLoRA</span>
+                    <span>Prompt Engineering</span>
+                    <span>Model Evaluation</span>
+                    <span>RAG Pipelines</span>
                 </div>
             </div>
 
             <div class="skill-card fade-in">
-                <h4>🗣️ Languages</h4>
+                <h4>🛠️ Tools &amp; Libraries</h4>
                 <div class="skill-tags">
-                    <span>English (Fluent)</span>
-                    <span>Hindi (Native)</span>
-                    <span>Japanese (Basic)</span>
+                    <span>Git</span>
+                    <span>Docker</span>
+                    <span>Weights &amp; Biases</span>
+                    <span>NumPy</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h4>🔬 Specialized</h4>
+                <div class="skill-tags">
+                    <span>Machine Unlearning</span>
+                    <span>Continual Learning</span>
+                    <span>Model Security</span>
+                    <span>Backdoor Detection</span>
+                    <span>NLP</span>
                 </div>
             </div>
 
@@ -814,44 +306,19 @@
     </div>
 </section>
 
-<!-- ════ AWARDS ════ -->
-<section id="awards">
+<!-- ════ ACADEMIC SERVICE ════ -->
+<section id="service">
     <div class="section-inner">
-        <h2 class="section-title">Awards &amp; Honors</h2>
-        <div class="awards-list">
-
-            <div class="award-item fade-in">
-                <div class="award-year">2025</div>
-                <div class="award-text">
-                    <strong>Best Paper Award</strong>
-                    <div class="award-org">Conference / Workshop Name</div>
-                </div>
+        <h2 class="section-title">Academic Service</h2>
+        <div class="service-list">
+            <div class="service-item fade-in">
+                <span class="role">Reviewer</span>
+                <span>International Joint Conference on Neural Networks (IJCNN) 2026</span>
             </div>
-
-            <div class="award-item fade-in">
-                <div class="award-year">2024</div>
-                <div class="award-text">
-                    <strong>Research Fellowship</strong>
-                    <div class="award-org">Funding Agency / University</div>
-                </div>
+            <div class="service-item fade-in">
+                <span class="role">Reviewer</span>
+                <span>ACM/SIGAPP Symposium on Applied Computing (SAC) 2026</span>
             </div>
-
-            <div class="award-item fade-in">
-                <div class="award-year">2023</div>
-                <div class="award-text">
-                    <strong>Dean's Merit List</strong>
-                    <div class="award-org">University Name</div>
-                </div>
-            </div>
-
-            <div class="award-item fade-in">
-                <div class="award-year">2021</div>
-                <div class="award-text">
-                    <strong>Gold Medal — Computer Science</strong>
-                    <div class="award-org">University Name</div>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
@@ -864,20 +331,40 @@
             <div class="contact-info fade-in">
                 <div class="contact-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    <a href="mailto:your.email@university.ac.jp">your.email@university.ac.jp</a>
+                    <a href="mailto:rachapudijagadeesh9580@gmail.com">rachapudijagadeesh9580@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <a href="mailto:S23096@students.iitmandi.ac.in">S23096@students.iitmandi.ac.in</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <a href="tel:+916304823148">+91 6304823148</a>
                 </div>
                 <div class="contact-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>Department of Computer Science<br>University Name, City, Country</span>
+                    <span>Center for Artificial Intelligence<br>IIT Mandi, Himachal Pradesh, India</span>
                 </div>
                 <div class="contact-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    <a href="https://yourusername.github.io">yourusername.github.io</a>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <a href="https://github.com/JagadeeshAI" target="_blank" rel="noopener">github.com/JagadeeshAI</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <a href="https://linkedin.com/in/jagadeeshrachapudi" target="_blank" rel="noopener">linkedin.com/in/jagadeeshrachapudi</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="8.5" cy="10.5" r="1.2" fill="#fff"/><circle cx="15.5" cy="10.5" r="1.2" fill="#fff"/><path d="M8 14c1 1.5 2.5 2.5 4 2.5s3-1 4-2.5" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                    <a href="https://huggingface.co/Jagadeesh9580" target="_blank" rel="noopener">huggingface.co/Jagadeesh9580</a>
                 </div>
             </div>
             <div class="contact-map fade-in">
-                <!-- Replace with Google Maps embed or image -->
-                <span>📍 Your University Location</span>
+                <iframe
+                    src="https://maps.google.com/maps?q=IIT%20Mandi%20Kamand%20Campus&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    title="IIT Mandi, Kamand Campus"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -885,52 +372,10 @@
 
 <!-- ════ FOOTER ════ -->
 <footer>
-    &copy; 2026 Your Name · Built with ♥ · <a href="https://github.com/yourusername">Source</a>
+    &copy; 2026 Jagadeesh Rachapudi · <a href="https://github.com/JagadeeshAI">Source</a>
 </footer>
 
-<script>
-    // Scroll shadow for nav
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 10);
-    });
-
-    // Mobile menu
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
-
-    // Scroll-based fade-in
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => entry.target.classList.add('visible'), i * 80);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // Active nav link highlight
-    const sections = document.querySelectorAll('section[id], header[id]');
-    const navAnchors = document.querySelectorAll('.nav-links a');
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            if (window.scrollY >= section.offsetTop - 120) {
-                current = section.getAttribute('id');
-            }
-        });
-        navAnchors.forEach(a => {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-        });
-    });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
