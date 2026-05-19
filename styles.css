@@ -1,18 +1,18 @@
 :root {
     --ink: #1a1a2e;
-    --paper: #faf9f6;
+    --paper: #fbf6ea;
     --accent: #2563eb;
     --accent-light: #dbeafe;
     --accent-dark: #1e40af;
-    --muted: #64748b;
-    --border: #e2e8f0;
-    --card-bg: #ffffff;
-    --section-alt: #f1f5f9;
+    --muted: #6b6450;
+    --border: #ede7d4;
+    --card-bg: #fffdf6;
+    --section-alt: #f6efdd;
     --success: #059669;
     --warm: #f59e0b;
-    --font-display: 'Source Serif 4', Georgia, serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
     --max-w: 960px;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -33,7 +33,7 @@ body {
 /* ── NAV ── */
 nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(250, 249, 246, 0.92);
+    background: rgba(251, 246, 234, 0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     transition: box-shadow var(--transition);
@@ -51,7 +51,7 @@ nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
 .nav-name {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     color: var(--ink);
     text-decoration: none;
     letter-spacing: -0.02em;
@@ -95,11 +95,12 @@ nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
 .hero-photo {
     width: 220px; height: 220px;
     border-radius: 50%;
-    border: 4px solid var(--accent-light);
-    box-shadow: 0 12px 40px rgba(37, 99, 235, 0.25),
-                0 4px 12px rgba(30, 64, 175, 0.15),
-                inset 0 -6px 20px rgba(0,0,0,0.08),
-                inset 0 6px 20px rgba(255,255,255,0.15);
+    border: 6px solid var(--paper);
+    outline: 1px solid var(--accent-light);
+    outline-offset: -7px;
+    box-shadow: 0 12px 40px rgba(37, 99, 235, 0.22),
+                0 4px 12px rgba(30, 64, 175, 0.12),
+                0 0 0 1px rgba(37, 99, 235, 0.10);
     background:
         radial-gradient(circle at 30% 30%, rgba(255,255,255,0.28), transparent 55%),
         linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 55%, #0b1d5c 100%);
@@ -113,15 +114,25 @@ nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background: conic-gradient(from 180deg, transparent 0deg, rgba(255,255,255,0.08) 90deg, transparent 180deg);
+    background:
+        radial-gradient(circle at center, transparent 58%, rgba(251, 246, 234, 0.55) 92%, rgba(251, 246, 234, 0.9) 100%),
+        conic-gradient(from 180deg, transparent 0deg, rgba(255,255,255,0.08) 90deg, transparent 180deg);
     pointer-events: none;
+    mix-blend-mode: normal;
 }
 .hero-photo:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 16px 48px rgba(37, 99, 235, 0.32),
                 0 6px 16px rgba(30, 64, 175, 0.2);
 }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 50%;
+    display: block;
+}
 .hero-initials {
     font-family: var(--font-display);
     font-size: 5.5rem;
