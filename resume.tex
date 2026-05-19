@@ -1,0 +1,209 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\definecolor{darkblue}{RGB}{0,51,102}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\bfseries\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{#2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\publicationItem}[3]{
+  \vspace{-2pt}\item
+    \textbf{\textcolor{darkblue}{#1}} \\
+    \textit{#2} \\
+    #3\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Jagadeesh Rachapudi} \\
+    \vspace{5pt}
+    \textbf{\large M.S. Student @ IIT Mandi}
+    \vspace{8pt}
+
+    \faEnvelope\ \ rachapudijagadeesh9580@gmail.com \quad
+    \faEnvelope\ \ S23096@students.iitmandi.ac.in \\
+    \faPhone\ \ (+91) 6304823148 \quad
+    \faMapMarker\ \ Hyderabad, India \\
+    \faLinkedin\ \ \href{https://www.linkedin.com/in/jagadeesh-rachapudi-49969a188/}{linkedin.com/in/jagadeesh-rachapudi} \quad
+    \faGithub\ \ \href{https://github.com/JagadeeshAI}{github.com/JagadeeshAI} \\
+    \faGoogle\ \ \href{https://scholar.google.com/citations?user=ljXq970AAAAJ\&hl=en}{Google Scholar}
+\end{center}
+\vspace{5pt}
+
+%-----------ABOUT ME-----------
+%-----------ABOUT ME-----------
+\section{\faPen\ \ About Me}
+\vspace{0.25cm}
+I am a second-year M.S. student at \textbf{IIT Mandi} specializing in AI/ML research at the \textbf{Center for Artificial Intelligence}. My research focuses on Machine Unlearning, Large Language Models, and AI Safety under \textbf{Dr. Amit Shukla} and \textbf{Dr. Praful Hambarde}. I have strong Python development skills and experience building AI systems for model evaluation, security testing, and continual learning. I am passionate about developing reliable and safe AI systems.
+
+%-----------EDUCATION-----------
+\vspace{0.25cm}
+\section{\faGraduationCap\ \ Education}
+  \resumeSubHeadingListStart
+  \vspace{0.25cm}
+    \resumeSubheading
+      {Master of Technology (Research), Robotics}{Jan 2024 -- Present}
+      {Indian Institute of Technology (IIT Mandi)}{CGPA: 7.33/10.0}
+    \resumeSubheading
+      {Bachelor of Technology, Computer Science}{Mar 2018 -- Feb 2022}
+      {Rise Krishna Sai Gandhi Group of Institutions}{CGPA: 7.21/10.0}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\vspace{0.25cm}
+\section{\faCode\ \ Technical Skills}
+  \resumeSubHeadingListStart
+  \vspace{0.25cm}
+    \item \textbf{Programming Languages:} Python, C++, Java
+    \item \textbf{ML/DL Frameworks:} PyTorch, TensorFlow, Hugging Face Transformers, scikit-learn
+    \item \textbf{LLM \& GenAI:} Fine-tuning (LoRA, QLoRA), Prompt Engineering, Model Evaluation, RAG Pipelines
+    \item \textbf{Tools \& Libraries:} Git, Docker, Weights \& Biases, NumPy, Pandas, Matplotlib
+    \item \textbf{Specialized:} Machine Unlearning, Continual Learning, Model Security, Backdoor Detection, NLP
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\vspace{0.05cm}
+\section{\faBook\ \ Publications}
+  \resumeSubHeadingListStart
+  \vspace{0.25cm}
+    \publicationItem
+      {[C1] BackFlush: Knowledge-Free Backdoor Detection and Elimination with Watermark Preservation in Large Language Models}
+      {\textbf{Jagadeesh Rachapudi}, Ritali Vatsi, Pranav Singh, Praful Hambarde, Amit Shukla}
+      {International Joint Conference on Neural Networks (IJCNN), 2026 (Accepted, CORE B)}
+    \publicationItem
+      {[C2] DEG-Net: An Efficient Deep Neural Network for Railway Track Crack Segmentation}
+      {Pranav Singh, Ritali Vatsi, \textbf{Rachapudi Jagadeesh}, Vinita Shukla, Vikas Sharma, Praful Hambarde, Amit Shukla}
+      {ACM/SIGAPP Symposium on Applied Computing (SAC), 2026 (Accepted, CORE B)}
+    \publicationItem
+      {[C6] Autonomous Pipeline Inspection Using Lightweight Vision-Based UAV Tracking}
+      {Naisarg Panya, Surya Prakash S.K, Ayush Gupta, Ashok Kumar Sivarathri, \textbf{Jagadeesh Rachapudi}, Praful Hambarde, Amit Shukla}
+      {IEEE Transactions on Artificial Intelligence (TAI) (Accepted, Q1)}
+    \publicationItem
+      {[C3] RePAIR: Interactive Machine Unlearning through Prompt-Aware Model Repair [\href{https://arxiv.org/abs/2604.12820}{arXiv}]}
+      {\textbf{Jagadeesh Rachapudi}, Pranav Singh, Ritali Vatsi, Sachin Chaudhary, Praful Hambarde, Amit Shukla}
+      {ACM Multimedia (ACM MM), 2026 (Under Review, CORE A*)}
+    \publicationItem
+      {[C4] Camouflage Unlearning: Fast and Surgical Machine Unlearning for Biometric Systems}
+      {\textbf{Jagadeesh Rachapudi}, Sachin Chaudhary, Praful Hambarde, Amit Shukla}
+      {International Joint Conference on Biometrics (IJCB), 2026 (Under Review, CORE B)}
+    \publicationItem
+      {[C5] BID-LoRA: A Parameter-Efficient Framework for Continual Learning and Unlearning [\href{https://arxiv.org/abs/2604.12686}{arXiv}]}
+      {\textbf{Jagadeesh Rachapudi}, Ritali Vatsi, Praful Hambarde, Amit Shukla}
+      {IEEE Transactions on Artificial Intelligence (TAI) (Under Review, Q1)}
+    \publicationItem
+      {[C7] Text-Centric Visual Question Answering Under Visual Degradation: A Comparative Study of Modular and End-to-End Approaches}
+      {Ritali Vatsi, Himani Sharma, \textbf{Jagadeesh Rachapudi}, Vikas Sharma, Amit Shukla, Pawan Goyal}
+      {IEEE International Conference on Advanced Video and Signal-Based Surveillance (AVSS), 2025 (Under Review, CORE B)}
+    \publicationItem
+      {[C8] Audio-Visual Talking-Head Deepfake Detection Using Modality-Specific Forensic Cues}
+      {Ritali Vatsi, \textbf{Rachapudi Jagadeesh}, Shruti Singh Baghel, Amit Shukla, Pawan Goyal, Sahil Vatsi}
+      {IEEE Region 10 Conference (TENCON), 2026 (Under Review, CORE C)}
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+%-----------RESEARCH EXPERIENCE-----------
+\vspace{0.25cm}
+\section{\faLightbulb\ \ Research Experience}
+  \resumeSubHeadingListStart
+  \vspace{0.25cm}
+    \resumeSubheading
+      {Center for Artificial Intelligence @ IIT Mandi}{Jan 2024 -- Present}
+      {M.Tech. Student (Advisors: Dr. Amit Shukla \& Dr. Praful Hambarde)}{}
+      \resumeItem{Conducting research on Machine Unlearning with focus on LLMs and biometric systems}
+      \resumeItem{Developed Python-based evaluation frameworks for model validation and benchmarking}
+      \resumeItem{Published/submitted 8 papers (3 accepted) at top-tier AI conferences and journals}
+  \resumeSubHeadingListEnd
+
+%-----------ACADEMIC SERVICE-----------
+\vspace{0.25cm}
+\section{\faComments\ \ Academic Service}
+  \resumeSubHeadingListStart
+  \vspace{0.25cm}
+    \item \textbf{Conference Reviewer}
+    \begin{itemize}[leftmargin=0.3in]
+        \item ACM/SIGAPP Symposium on Applied Computing (SAC) 2026
+        \item International Joint Conference on Neural Networks (IJCNN) 2026
+    \end{itemize}
+  \resumeSubHeadingListEnd
+
+%-----------TEACHING EXPERIENCE-----------
+% \vspace{0.25cm}
+% \section{\faChalkboardTeacher\ \ Teaching Experience}
+%   \resumeSubHeadingListStart
+%   \vspace{0.25cm}
+%     \resumeSubheading
+%       {AR-512 Multi Modal Learning (IIT Mandi)}{Fall 2025}
+%       {Teaching Assistant}{}
+%   \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\vspace{0.25cm}
+\section{\faTrophy\ \ Achievements}
+  \resumeSubHeadingListStart
+  \vspace{0.25cm}
+    \item \textbf{CVPR 2025 NTIRE Challenge on RAW Image Restoration - Track 1: Super Resolution}
+    \begin{itemize}[leftmargin=0.3in]
+        \item Developed RawSRMamba: Mamba-Based Raw Image Super-resolution
+    \end{itemize}
+  \resumeSubHeadingListEnd
+
+\end{document}
